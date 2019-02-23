@@ -51,5 +51,8 @@ RUN	git clone https://github.com/PointCloudLibrary/pcl.git && \
     make -j ${THREADS:-`cat /proc/cpuinfo | grep processor | wc -l`} &&\
     make install
 
+RUN apt-get install -y \
+	ubuntu-desktop
+
 # NAS
 RUN mkdir /mnt/nas
